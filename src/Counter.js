@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 
 export default class Counter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      count: 0,
-    }
-
-    this.handleIncrement = this.handleIncrement.bind(this);
-    this.handleDecrement = this.handleDecrement.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+  state = {
+    count: 0,
   }
 
-  handleIncrement() {
+  handleIncrement = () => {
     this.setState((state) => ({ count: state.count + 1 }));
   }
 
-  handleDecrement() {
+  handleDecrement = () => {
     this.setState((state) => ({ count: state.count - 1 }));
   }
 
-  handleReset() {
+  handleReset = () => {
     this.setState({ count: 0 });
   }
 
